@@ -1,5 +1,6 @@
 body {
   overflow : hidden; 
+  background: -webkit-linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
   background: linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
 }
 img, div {
