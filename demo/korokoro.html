@@ -1,63 +1,66 @@
 <html>
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <style>
-        body {
-            background: linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
-        }
-        img, div {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-        }
-        .shadow {
-            width: 150px;
-            height: 150px;
-            top: 190px;
-            border-radius: 100px;
-            background-color: #e6e1bb;
-            transform: scale(1.0, 0.2);
-        }
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <style>
+    body {
+      overflow : hidden; 
+      background: linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
+    }
+    img, div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .shadow {
+      width: 150px;
+      height: 150px;
+      top: 190px;
+      border-radius: 100px;
+      background-color: #e6e1bb;
+      transform: scale(1.0, 0.2);
+    }
 
-        /* Animation setting */
-        .korokoro {
-            animation: korokoro 2.5s linear 0s 1;
-        }
-        @keyframes korokoro {
-            0%   { transform: translate(0%, 0%); }
-            5%   { transform: translate(10%, 0%) rotate(10deg); }
-            25%  { transform: translate(20%, 0%) rotate(20deg); }
-            30%  { transform: translate(-10%, 0%) rotate(-10deg); }
-            35%  { transform: translate(-15%, 0%) rotate(-15deg); }
-            45%  { transform: translate(10%, 0%) rotate(10deg); }
-            50%  { transform: translate(15%, 0%) rotate(15deg); }
-            60%  { transform: translate(-5%, 0%) rotate(-5deg); }
-            65%  { transform: translate(-7%, 0%) rotate(-7deg); }
-            75%  { transform: translate(0%, 0%) rotate(0deg); }
-            100% { transform: translate(0%, 0%) rotate(0deg); }
-        }
-    </style>
-    <script>
-        /* Animation loop */
-        window.addEventListener("load", playAnimation);
-            
-        function playAnimation() {
-            var element = document.getElementById("mitarashi");
-            element.addEventListener("animationend", listener);
-            element.classList.add("korokoro");
-        }
-        function listener(event) {
-            event.target.classList.remove("korokoro");
-            setTimeout(playAnimation, 100);
-        }
-    </script>
+    /* Animation setting */
+    .korokoro {
+      animation: korokoro 2.5s linear 0s 1;
+      animation: korokoro 2.5s linear 0s 1;
+    }
+    
+    @keyframes korokoro {
+      0%   { transform: translate(0%, 0%); }
+      5%   { transform: translate(10%, 0%) rotate(10deg); }
+      25%  { transform: translate(20%, 0%) rotate(20deg); }
+      30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { transform: translate(10%, 0%) rotate(10deg); }
+      50%  { transform: translate(15%, 0%) rotate(15deg); }
+      60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { transform: translate(0%, 0%) rotate(0deg); }
+      100% { transform: translate(0%, 0%) rotate(0deg); }
+    }
+  </style>
+  <script>
+    /* Animation loop */
+    window.addEventListener("load", playAnimation);
+
+    function playAnimation() {
+      var element = document.getElementById("mitarashi");
+      element.addEventListener("animationend", listener);
+      element.classList.add("korokoro");
+    }
+    function listener(event) {
+      event.target.classList.remove("korokoro");
+      setTimeout(playAnimation, 100);
+    }
+  </script>
 </head>
 <body>
-    <div class="shadow"></div>
-    <img id="mitarashi" src="mitarashi.png" width="200" height="200">
+  <div class="shadow"></div>
+  <img id="mitarashi" src="mitarashi.png" width="200" height="200">
 </body>
 </html>

@@ -1,60 +1,61 @@
 <html>
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <style>
-        body {
-            background: linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
-        }
-        img, div {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-        }
-        .shadow {
-            width: 150px;
-            height: 150px;
-            top: 190px;
-            border-radius: 100px;
-            background-color: #e6e1bb;
-            transform: scale(1.0, 0.2);
-        }
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <style>
+    body {
+      overflow : hidden; 
+      background: linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
+    }
+    img, div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .shadow {
+      width: 150px;
+      height: 150px;
+      top: 190px;
+      border-radius: 100px;
+      background-color: #e6e1bb;
+      transform: scale(1.0, 0.2);
+    }
 
-        /* Animation setting */
-        .pururun {
-            animation: pururun 1.2s linear 0.2s 1;
-        }
-        @keyframes pururun {
-            0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
-            10%  { transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
-            60%  { transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
-            70%  { transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
-            80%  { transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
-            80%  { transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
-            90%  { transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
-            100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
-        }
-    </style>
-    <script>
-        /* Animation loop */
-        window.addEventListener("load", playAnimation);
-            
-        function playAnimation() {
-            var element = document.getElementById("mitarashi");
-            element.addEventListener("animationend", listener);
-            element.classList.add("pururun");
-        }
-        function listener(event) {
-            event.target.classList.remove("pururun");
-            setTimeout(playAnimation, 600);
-        }
-    </script>
+    /* Animation setting */
+    .pururun {
+      animation: pururun 1.2s linear 0.2s 1;
+    }
+    @keyframes pururun {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
+      60%  { transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
+      70%  { transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      90%  { transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+  </style>
+  <script>
+    /* Animation loop */
+    window.addEventListener("load", playAnimation);
+
+    function playAnimation() {
+      var element = document.getElementById("mitarashi");
+      element.addEventListener("animationend", listener);
+      element.classList.add("pururun");
+    }
+    function listener(event) {
+      event.target.classList.remove("pururun");
+      setTimeout(playAnimation, 600);
+    }
+  </script>
 </head>
 <body>
-    <div class="shadow"></div>
-    <img id="mitarashi" src="mitarashi.png" width="200" height="200">
+  <div class="shadow"></div>
+  <img id="mitarashi" src="mitarashi.png" width="200" height="200">
 </body>
 </html>
