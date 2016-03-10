@@ -6,8 +6,21 @@
   <style>
     /* Animation setting */
     .korokoro {
+      -webkit-animation: korokoro 2.5s linear 0s 1;
       animation: korokoro 2.5s linear 0s 1;
-      animation: korokoro 2.5s linear 0s 1;
+    }
+    @-webkit-keyframes korokoro {
+      0%   { -webkit-transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      25%  { -webkit-transform: translate(20%, 0%) rotate(20deg); }
+      30%  { -webkit-transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { -webkit-transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      50%  { -webkit-transform: translate(15%, 0%) rotate(15deg); }
+      60%  { -webkit-transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { -webkit-transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { -webkit-transform: translate(0%, 0%) rotate(0deg); }
+      100% { -webkit-transform: translate(0%, 0%) rotate(0deg); }
     }
     @keyframes korokoro {
       0%   { transform: translate(0%, 0%); }

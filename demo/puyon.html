@@ -6,7 +6,17 @@
   <style>
     /* Animation setting */
     .puyon {
+      -webkit-animation: puyon 1.0s linear 0s 1;
       animation: puyon 1.0s linear 0s 1;
+    }
+    @-webkit-keyframes puyon {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
+      50%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      60%  { -webkit-transform: scale(0.95, 1.05) translate(0%, -3%); }
+      70%  { -webkit-transform: scale(1.05, 0.95) translate(0%, 3%); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
     }
     @keyframes puyon {
       0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }

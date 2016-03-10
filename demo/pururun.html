@@ -6,7 +6,18 @@
   <style>
     /* Animation setting */
     .pururun {
+      -webkit-animation: pururun 1.2s linear 0.2s 1;
       animation: pururun 1.2s linear 0.2s 1;
+    }
+    @-webkit-keyframes pururun {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
+      60%  { -webkit-transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      90%  { -webkit-transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
     }
     @keyframes pururun {
       0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
