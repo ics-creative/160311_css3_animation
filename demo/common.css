@@ -17,4 +17,5 @@ img, div {
   border-radius: 100px;
   background-color: #e6e1bb;
   transform: scale(1.0, 0.2);
+  -webkit-transform: scale(1.0, 0.2);
 }
