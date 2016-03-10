@@ -2,28 +2,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <link rel="stylesheet" href="common.css">
   <style>
-    body {
-      overflow : hidden; 
-      background: linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
-    }
-    img, div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-    }
-    .shadow {
-      width: 150px;
-      height: 150px;
-      top: 190px;
-      border-radius: 100px;
-      background-color: #e6e1bb;
-      transform: scale(1.0, 0.2);
-    }
-
     /* Animation setting */
     .purun {
       animation: purun 0.8s linear 0s 1;
@@ -37,23 +17,13 @@
       100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
     }
   </style>
-  <script>
-    /* Animation loop */
-    window.addEventListener("load", playAnimation);
-
-    function playAnimation() {
-      var element = document.getElementById("mitarashi");
-      element.addEventListener("animationend", listener);
-      element.classList.add("purun");
-    }
-    function listener(event) {
-      event.target.classList.remove("purun");
-      setTimeout(playAnimation, 600);
-    }
-  </script>
+  <script src="common.js"></script>
 </head>
 <body>
   <div class="shadow"></div>
   <img id="mitarashi" src="mitarashi.png" width="200" height="200">
+  <script>
+    looopAnimation("purun", 600);
+  </script>
 </body>
 </html>
