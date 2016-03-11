@@ -1,14 +1,15 @@
 
-/* CSSアニメーションを間隔を空けてループさせる処理 */
-function looopAnimation(className, delay) {
-  function playAnimation() {
-    var element = document.getElementById("mitarashi");
-    element.addEventListener("animationend", listener);
-    element.classList.add(className);
-  }
+// CSSアニメーションを間隔を空けてループ再生させる処理
+function looopAnimation(id, className, delay) {
+  var element = document.getElementById(id);
+  element.addEventListener("animationend", listener);
+  
   function listener(event) {
     event.target.classList.remove(className);
     setTimeout(playAnimation, delay);
   }
-  playAnimation();
+
+  function playAnimation() {
+    element.classList.add(className);
+  }
 }
