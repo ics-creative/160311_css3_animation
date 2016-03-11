@@ -1,5 +1,5 @@
 
-/* Animation loop */
+/* CSSアニメーションを間隔を空けてループさせる処理 */
 function looopAnimation(className, delay) {
   function playAnimation() {
     var element = document.getElementById("mitarashi");
