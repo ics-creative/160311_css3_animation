@@ -1,7 +1,7 @@
 
 // CSSアニメーションを間隔を空けてループ再生させる処理
 function looopAnimation(id, className, delay) {
-  var element = document.getElementById(id);
+  const element = document.getElementById(id);
   element.addEventListener("animationend", listener);
   
   function listener(event) {

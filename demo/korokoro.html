@@ -1,27 +1,16 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/common.css">
   <style>
     /* CSSアニメーションの設定 */
-    .korokoro {
-      -webkit-animation: korokoro 2.5s linear 0s 1;
-      animation: korokoro 2.5s linear 0s 1;
+    img {
+      &.korokoro {
+        animation: korokoro 2.5s linear 0s 1;
+      }
     }
-    @-webkit-keyframes korokoro {
-      0%   { -webkit-transform: translate(0%, 0%); }
-      5%   { -webkit-transform: translate(10%, 0%) rotate(10deg); }
-      25%  { -webkit-transform: translate(20%, 0%) rotate(20deg); }
-      30%  { -webkit-transform: translate(-10%, 0%) rotate(-10deg); }
-      35%  { -webkit-transform: translate(-15%, 0%) rotate(-15deg); }
-      45%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
-      50%  { -webkit-transform: translate(15%, 0%) rotate(15deg); }
-      60%  { -webkit-transform: translate(-5%, 0%) rotate(-5deg); }
-      65%  { -webkit-transform: translate(-7%, 0%) rotate(-7deg); }
-      75%  { -webkit-transform: translate(0%, 0%) rotate(0deg); }
-      100% { -webkit-transform: translate(0%, 0%) rotate(0deg); }
-    }
+
     @keyframes korokoro {
       0%   { transform: translate(0%, 0%); }
       5%   { transform: translate(10%, 0%) rotate(10deg); }
@@ -40,7 +29,7 @@
 </head>
 <body>
   <div class="shadow"></div>
-  <img id="mitarashi" class="korokoro" src="images/mitarashi.png" width="200" height="200">
+  <img id="mitarashi" class="korokoro" src="images/mitarashi.png" width="200" height="200" />
   <script>
     // ID値「mitarashi」に対してCSSアニメ―ション「korokoro」を100ミリ秒の間隔を空けてループ再生
     looopAnimation("mitarashi", "korokoro", 100);

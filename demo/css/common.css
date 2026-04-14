@@ -1,16 +1,15 @@
 body {
-  overflow : hidden;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(55%,#fbf9eb), color-stop(55%,#f1eed6), color-stop(100%,#fbf9eb));
-  background: linear-gradient(to bottom, #fbf9eb 55%, #f1eed6 55%, #fbf9eb 100%);
+  overflow: clip;
+  background: linear-gradient(180deg, #fbf9eb 0 55%, #f1eed6 55% 70%, #fbf9eb 70% 100%);
 }
-img, div {
+
+img,
+div {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   margin: auto;
 }
+
 .shadow {
   width: 150px;
   height: 150px;
@@ -18,5 +17,4 @@ img, div {
   border-radius: 100px;
   background-color: #e6e1bb;
   transform: scale(1.0, 0.2);
-  -webkit-transform: scale(1.0, 0.2);
 }

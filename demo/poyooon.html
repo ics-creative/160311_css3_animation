@@ -1,24 +1,16 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/common.css">
   <style>
     /* CSSアニメーションの設定 */
-    .poyooon {
-      -webkit-animation: poyooon 0.9s linear 0s 1;
-      animation: poyooon 0.9s linear 0s 1;
+    img {
+      &.poyooon {
+        animation: poyooon 0.9s linear 0s 1;
+      }
     }
-    @-webkit-keyframes poyooon {
-      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-      10%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
-      40%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
-      50%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-      60%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -100%); }
-      75%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -20%); }
-      85%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
-      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-    }
+
     @keyframes poyooon {
       0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
       10%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
@@ -34,7 +26,7 @@
 </head>
 <body>
   <div class="shadow"></div>
-  <img id="mitarashi" class="poyooon" src="images/mitarashi.png" width="200" height="200">
+  <img id="mitarashi" class="poyooon" src="images/mitarashi.png" width="200" height="200" />
   <script>
     // ID値「mitarashi」に対してCSSアニメ―ション「poyooon」を600ミリ秒の間隔を空けてループ再生
     looopAnimation("mitarashi", "poyooon", 600);

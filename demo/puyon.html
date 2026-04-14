@@ -1,23 +1,16 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/common.css">
   <style>
     /* CSSアニメーションの設定 */
-    .puyon {
-      -webkit-animation: puyon 1.0s linear 0s 1;
-      animation: puyon 1.0s linear 0s 1;
+    img {
+      &.puyon {
+        animation: puyon 1.0s linear 0s 1;
+      }
     }
-    @-webkit-keyframes puyon {
-      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-      40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
-      50%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
-      60%  { -webkit-transform: scale(0.95, 1.05) translate(0%, -3%); }
-      70%  { -webkit-transform: scale(1.05, 0.95) translate(0%, 3%); }
-      80%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-    }
+
     @keyframes puyon {
       0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
       40%  { transform: scale(0.95, 1.2) translate(0%, -10%); }
@@ -32,7 +25,7 @@
 </head>
 <body>
   <div class="shadow"></div>
-  <img id="mitarashi" class="puyon" src="images/mitarashi.png" width="200" height="200">
+  <img id="mitarashi" class="puyon" src="images/mitarashi.png" width="200" height="200" />
   <script>
     // ID値「mitarashi」に対してCSSアニメ―ション「puyon」を400ミリ秒の間隔を空けてループ再生
     looopAnimation("mitarashi", "puyon", 400);

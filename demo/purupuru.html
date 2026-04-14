@@ -1,22 +1,16 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/common.css">
   <style>
     /* CSSアニメーションの設定 */
-    .purupuru {
-      -webkit-animation: purupuru 0.8s linear 0s 1;
-      animation: purupuru 0.8s linear 0s 1;
+    img {
+      &.purupuru {
+        animation: purupuru 0.8s linear 0s 1;
+      }
     }
-    @-webkit-keyframes purupuru {
-      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-      20%  { -webkit-transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
-      50%  { -webkit-transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
-      65%  { -webkit-transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
-      80%  { -webkit-transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
-      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-    }
+
     @keyframes purupuru {
       0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
       20%  { transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
@@ -30,7 +24,7 @@
 </head>
 <body>
   <div class="shadow"></div>
-  <img id="mitarashi" class="purupuru" src="images/mitarashi.png" width="200" height="200">
+  <img id="mitarashi" class="purupuru" src="images/mitarashi.png" width="200" height="200" />
   <script>
     // ID値「mitarashi」に対してCSSアニメ―ション「purupuru」を800ミリ秒の間隔を空けてループ再生
     looopAnimation("mitarashi", "purupuru", 800);
