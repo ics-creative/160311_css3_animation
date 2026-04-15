@@ -3,8 +3,8 @@ body {
   background: linear-gradient(180deg, #fbf9eb 0 55%, #f1eed6 55% 70%, #fbf9eb 70% 100%);
 }
 
-img,
-div {
+.demo-object,
+.shadow {
   position: absolute;
   inset: 0;
   margin: auto;
